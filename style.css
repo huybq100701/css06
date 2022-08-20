@@ -1,0 +1,102 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}  
+.navbar {
+	padding: 43px 65px;
+	font-family: "New York Small";
+}
+.navbar-light .navbar-nav .nav-item::after {
+	display: none;
+	position: absolute;
+	width: 75%;
+	height: 1.5px;
+	background-color: #000;
+	bottom: -44px;
+	left: 11px;
+}
+.navbar-light .navbar-nav .nav-item:hover::after {
+	display: block;
+}
+.navbar-light .navbar-nav .nav-item.active::after {
+	display: block;
+}
+.nav-link {
+	font-size: 20px;
+	font-weight: 500;
+}
+img {
+	object-fit: cover;
+	width: 100%;
+}
+.img-logo {
+	width: 15rem;
+}
+section .container {
+	max-width: 900px;
+}
+section .container img.img-fluid {
+	height: 30rem;
+}
+section .container img {
+	height: 15rem;
+  }
+section .container > small {
+	max-width: 25rem;
+  }
+section .container .avatar {
+	width: 70px;
+	height: auto;
+}
+section .eyes {
+	height: auto;
+	width: 5rem;
+}
+section .form-wrapper {
+	width: 100%;
+	max-width: 30rem;
+}  
+.footer {
+	background: #000;
+}
+.job {
+	letter-spacing: 0.3em;
+	text-overflow: ellipsis;
+	font-size: 20px;
+}
+.footer-text {
+	padding: 0px;
+	font-family: "New York Small";
+}
+
+.copyright {
+	font-size: 12px;
+}
+@media screen and (max-width: 48em) {
+    .main{
+        padding: 0 1.25em;
+    }
+    .navbar, .section, .title{
+        padding: 0;
+    }
+    .footer-text{
+        padding: 0 1.25em;
+    }
+}
+@media screen and (max-width: 62em)  {
+    .navbar-light .navbar-nav .nav-item.active::after{
+        display: none;
+    }
+    .navbar-light .navbar-nav .nav-item:hover::after{
+        display: none;
+    }
+}
+@media screen and (min-width: 48em) and (max-width: 87.5em) {
+    .main, .title{
+        padding: 0 3.125em;
+    }
+    .footer-text{
+        padding: 0 6em;
+    }
+}

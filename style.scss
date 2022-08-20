@@ -1,0 +1,133 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}  
+.navbar {
+	padding: 43px 65px;
+	font-family: "New York Small";
+}
+.navbar-light {
+	.navbar-nav {
+		.nav-item {
+			&::after {
+				display: none;
+				position: absolute;
+				width: 75%;
+				height: 1.5px;
+				background-color: #000;
+				bottom: -44px;
+				left: 11px;
+			}
+			&:hover {
+				&::after {
+					display: block;
+				}
+			}
+		}
+		.nav-item.active {
+			&::after {
+				display: block;
+			}
+		}
+	}
+}
+.nav-link {
+	font-size: 20px;
+	font-weight: 500;
+}
+img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.img-logo {
+    width: 15rem;
+}
+
+section {
+    .container {
+        max-width: 900px;
+
+        img.img-fluid {
+            height: 30rem;
+        }
+
+        img {
+            height: 15rem;
+        }
+
+        &>small {
+            max-width: 25rem;
+        }
+
+        .avatar {
+            width: 70px;
+            height: auto;
+        }
+    }
+
+    .eyes {
+        height: auto;
+        width: 5rem;
+    }
+
+    .form-wrapper {
+        width: 100%;
+        max-width: 30rem;
+    }
+}
+
+footer {
+    div:first-child {
+        white-space: nowrap;
+    }
+}
+
+
+@media screen and (max-width: 48em) {
+	.main {
+		padding: 0 1.25em;
+	}
+	.navbar {
+		padding: 0;
+	}
+	.section {
+		padding: 0;
+	}
+	.title {
+		padding: 0;
+	}
+	.footer-text {
+		padding: 0 1.25em;
+	}
+}
+@media screen and (max-width: 62em) {
+	.navbar-light {
+		.navbar-nav {
+			.nav-item.active {
+				&::after {
+					display: none;
+				}
+			}
+			.nav-item {
+				&:hover {
+					&::after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 48em) and (max-width: 87.5em) {
+	.main {
+		padding: 0 3.125em;
+	}
+	.title {
+		padding: 0 3.125em;
+	}
+	.footer-text {
+		padding: 0 6em;
+	}
+}
